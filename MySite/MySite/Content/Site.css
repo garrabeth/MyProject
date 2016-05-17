@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Arial';
+    font-family: 'Century Gothic';
     color: rgba(0,0,0,0.8);
     font-size:150px;
     background-color: #fff;
@@ -14,8 +14,10 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
+form,
 textarea {
-    max-width: 280px;
+    max-width: 300px;
+    max-height:200px;
 }
 
 article {
@@ -100,30 +102,28 @@ section {
 
 
 #home {
-    background: rgb(149, 162, 154) fixed; min-height: 1300px; z-index:-1;
+    background: transparent fixed; min-height: 1300px; 
     overflow: hidden;
 }
 
-#home-triangle {
-    border-top: 550px solid transparent;
-    border-right: 2380px solid white;
-    padding-bottom: 200px;
+#home-splitter {
+    border-top: 900px solid rgb(94, 128, 123) ;
+    border-right: 2000px solid rgb(237, 226, 141); 
+    border-bottom: 400px solid rgb(111, 201, 147);
     width:0px;
     height:0px;
-    z-index:-1;
-    transform:rotate(-180deg);    
+    transform:rotate(-180deg);
+    z-index:-9;
+    position:inherit;
 }
 
-#home-circle {
-    background-color: #f5ba8d;
-    width:700px;
-    height:700px;
-    border-radius:50%;
-    position: absolute;
-    right:80px;
-    top:80px;
+#home-content{
+    width:2380px;
+    height:1300px;
+    position:relative;
+    margin:0 auto;
+  }
 
-}
 #home article {
     position:absolute;
     text-align: center;
@@ -131,30 +131,59 @@ section {
     width: 100%;    
 }
 
-#myname {
-    color:rgba(0,0,0,0.8);
-    width:700px;
-    height: 100px;
-    transform: rotate(-13deg);
+#name-box {
     position:absolute;
-    top:330px;
-    left:260px;
+    width:600px;
+    height:100px;
+    background-color:rgba(0,0,0,0.8);
+    left:1000px;
+    top: 160px;
+    transform: rotate(11.3deg)
 }
 
-#myname article {
-    font-size:100px;
+#name-box article {
+    position:absolute;
+    top:1px;
+    font-size:72px;
+    color:white;
 }
 
+#jobtitle-box {
+    position:absolute;
+    width:600px;
+    height:100px;
+    left:978px;
+    top: 260px;
+    transform: rotate(11.3deg);
+}
+
+#jobtitle-box article {
+    position:absolute;
+    top:0px;
+    font-size:52px;
+    color: rgba(0,0,0,0.8);
+}
+
+#description-box {
+    background-color:rgb(250, 240, 165);
+    width: 500px; 
+	height: 500px;
+    border-radius:50%;
+    position:absolute;
+    left:400px;
+    top:300px;
+    box-shadow:inset 0 0 10px rgb(177, 167, 83);
+}
 
 #content {
     background: rgb(222, 244, 208) fixed; background-size:cover; min-height:1300px;
-    overflow:hidden;
-    
+    overflow:hidden;   
 }
 
 #content-splitter {
-    border-top: 505px solid rgb(94, 128, 123) ;
+    border-top: 505px solid rgb(94, 128, 123);
     border-bottom: 880px solid #ddaa85;
+    border-right:2200px solid rgb(237, 226, 141);
 }
 
 #content article {
@@ -164,16 +193,16 @@ section {
     width:100%;
 }
 
-
-
 #footer {
-    background: rgb(55, 92, 52) fixed; background-size:cover; min-height:1300px;
+    background: transparent fixed; background-size:cover; min-height:1300px;
     overflow:hidden;
 }
 
 #contact-splitter {
-    border-left: 800px solid rgb(237, 226, 141);
+    position:relative;
+    border-left: 1950px solid rgb(237, 226, 141);
     border-bottom: 1300px solid #89be8b;
+    z-index:-22;    
 }
 
 #footer article {
@@ -182,3 +211,85 @@ section {
     top:150px;
     width:100%;
 }
+/*--------------CONTACT FORM------------------*/
+
+#main-form{    
+    width:600px;
+    height:600px;
+    position:relative;
+    float:left;
+    text-align:center;
+}
+
+.form-contact {
+    height: 586px;
+    width:586px;
+    border-radius:50%;
+    margin-left: 980px;
+    margin-top:850px;
+    font-size:20px;
+    background-color:rgb(237, 226, 141);
+    position:relative;
+    
+}
+
+.form-layout {
+    height:500px;
+    width: 450px;
+    margin-top:80px;
+    position:absolute;
+    right:65px;
+}
+
+.formGroup {
+    margin-bottom: 5px;
+    margin-top:5px;
+    margin-right:5px;
+    margin-left:0;
+    height: 50px;
+    width: 350px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    box-shadow: 0 0 7px #89be8b;
+}
+
+.formGroup #txtFirstName {
+    margin-left: 600px;
+}
+
+#buttonSend {
+    height:50px;
+    width:300px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Century Gothic';
+    position:absolute;
+    top:380px;
+    right:137px;
+    border-radius:10px;
+    border: none;
+    background-color:#89be8b;
+    color:#FFF;
+}
+
+#txtInfo {   
+    font-size:20px;
+    width:950px;
+    height:180px;
+    margin-right:0px;
+    margin-top:5px;
+    border-radius:10px;
+    border: none;
+    resize: none;
+    outline:none;
+    box-shadow: 0 0 7px #89be8b;
+}
+
+#writeMe {
+    color:rgb(36, 51, 42);
+    font-family: 'Century Gothic';
+    margin-top:0px;
+}
+
+/*--------------END CONTACT FORM------------------*/

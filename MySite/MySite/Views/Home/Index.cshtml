@@ -15,10 +15,16 @@
 
     <div id="sections">
         <section id="home" data-type="background" data-speed="10" class="pages">
-            <div id="home-triangle"></div>
-            <div id="home-circle"></div>
-            <div id="myname"><article>Gabriel Bashe</article></div>
-            <article></article>
+            <div id="home-content">
+                <div id="name-box"><article>Gabriel Bashe</article></div>
+                <div id="jobtitle-box"><article>back-end & front-end developer</article></div>
+                <div id="description-box">
+                    <article>Job status</article>
+                    <h2>Employee &#64; Softronic AB</h2>
+                </div>
+                <div id="home-splitter"></div>
+            </div>                
+                <article></article>
         </section>
 
         <section id="content" data-type="background" data-speed="10" class="pages">
@@ -29,7 +35,22 @@
         </section>
 
         <section id="footer" data-type="background" data-speed="10" class="pages">
-            <div id="contact-splitter"></div>
+            <form id="main-form">
+                <div class="form-contact">                    
+                    <div class="form-layout">
+                        <h2 id="writeMe">WRITE ME!</h2>
+                        <div>
+                            <input type="text" class="formGroup" id="txtFirstName" placeholder="Name" />
+                        </div>
+                        <div>
+                            <textarea id="txtInfo" placeholder="Write anything..."></textarea>                            
+                        </div>                       
+                    </div>
+                    <button type="button" id="buttonSend" value="Send me">DON'T SEND</button>                 
+                </div>                    
+            </form>       
+                <div id="contact-splitter">
+                </div>
             <article></article>
         </section>
     </div>
