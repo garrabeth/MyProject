@@ -1,8 +1,16 @@
-﻿body {
+﻿html{
+    max-width:2380px;
+}
+
+body {
     font-family: 'Century Gothic';
     color: rgba(0,0,0,0.8);
     font-size:150px;
-    background-color: #fff;
+    background-color: rgb(237, 226, 141);
+    max-width:2380px;
+    height:3900px;
+    background: fixed;
+    margin:0 auto;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -42,10 +50,12 @@ section {
     width:100%;
     margin: 0 auto;
     position:relative;
+    z-index:-3;
 }
 
 #sections {
     margin-top:0px;
+    z-index:-4;
 }
 
 .navigation {
@@ -73,7 +83,7 @@ section {
     height:560px;
 }
 
-.shape {
+.menu-shape {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -82,7 +92,7 @@ section {
     text-align:center;
 }
 
-.shape span {
+.menu-shape span {
     font-size: 40%;
     color: rgba(0,0,0,0.8) ;
     line-height:120px;
@@ -104,25 +114,20 @@ section {
 #home {
     background: transparent fixed; min-height: 1300px; 
     overflow: hidden;
+    width:100%;
+    z-index:-2;
 }
 
 #home-splitter {
-    border-top: 900px solid rgb(94, 128, 123) ;
-    border-right: 2000px solid rgb(237, 226, 141); 
-    border-bottom: 400px solid rgb(111, 201, 147);
+    border-top: 1000px solid rgb(94, 128, 123) ;
+    border-right: 2600px solid rgb(237, 226, 141); 
+    border-bottom: 500px solid rgb(111, 201, 147);
     width:0px;
     height:0px;
     transform:rotate(-180deg);
-    z-index:-9;
-    position:inherit;
+    z-index:-1;
+    position:absolute;
 }
-
-#home-content{
-    width:2380px;
-    height:1300px;
-    position:relative;
-    margin:0 auto;
-  }
 
 #home article {
     position:absolute;
@@ -130,49 +135,76 @@ section {
     top: 150px;
     width: 100%;    
 }
+#main-box-name {
+    background-color:rgb(111, 201, 147);
+    height:290px;
+    width:700px;
+    position:relative;
+    transform:rotate(10.9deg);
+    margin-left: 1000px;
+    margin-top:161px;
+}
 
 #name-box {
     position:absolute;
-    width:600px;
+    width:700px;
     height:100px;
     background-color:rgba(0,0,0,0.8);
-    left:1000px;
-    top: 160px;
-    transform: rotate(11.3deg)
+    top:0px;    
 }
 
 #name-box article {
-    position:absolute;
-    top:1px;
+    top:0px;
     font-size:72px;
     color:white;
 }
 
-#jobtitle-box {
-    position:absolute;
-    width:600px;
-    height:100px;
-    left:978px;
-    top: 260px;
-    transform: rotate(11.3deg);
-}
-
-#jobtitle-box article {
-    position:absolute;
-    top:0px;
-    font-size:52px;
-    color: rgba(0,0,0,0.8);
+#profession {
+    position:relative;
+    font-size:50px;
+    margin: 0 auto;
+    color: rgb(222, 244, 208);
 }
 
 #description-box {
+    position:absolute;
+    top:350px;
     background-color:rgb(250, 240, 165);
     width: 500px; 
 	height: 500px;
     border-radius:50%;
     position:absolute;
-    left:400px;
-    top:300px;
+    margin-left:350px;
+    margin-bottom:40px;
     box-shadow:inset 0 0 10px rgb(177, 167, 83);
+}
+
+#description-box article {
+    font-size:50px;
+    top:70px;
+}
+
+#employed {
+    font-size:40px;
+    top:140px;
+    left:170px;
+    position:absolute;
+}
+
+#at {
+    top:200px;
+    position:absolute;
+    left:205px;
+}
+
+#at h3 {
+    font-size:100px;
+}
+
+#jobtitle {
+    position:absolute;
+    left:120px;
+    top: 330px;
 }
 
 #content {
@@ -180,17 +212,38 @@ section {
     overflow:hidden;   
 }
 
+#content-content {
+    position: relative;
+    height:1300px;
+    width:2800px;
+}
 #content-splitter {
     border-top: 505px solid rgb(94, 128, 123);
-    border-bottom: 880px solid #ddaa85;
-    border-right:2200px solid rgb(237, 226, 141);
+    border-bottom: 800px solid #ddaa85;
+    border-right:2800px solid rgb(237, 226, 141);
+    z-index:-1;
+    position:absolute;
 }
 
-#content article {
-    position:absolute;
-    text-align: center;
+#gauges {
+    background-color: rgba(0,0,0,0.5);
+    border-radius:5px;
+    box-shadow: 0 0 5px rgb(36, 51, 42);
+    width: 1700px;
+    height: 1000px;
+    position: relative;
+    text-align:center;
+    margin:0 400px;
+    position: absolute;
     top:150px;
-    width:100%;
+}
+
+#bar1{
+    width:300px;
+    height:300px;
+    position: absolute;
+    left:150px;
+    top:100px;
 }
 
 #footer {
@@ -199,10 +252,10 @@ section {
 }
 
 #contact-splitter {
-    position:relative;
-    border-left: 1950px solid rgb(237, 226, 141);
-    border-bottom: 1300px solid #89be8b;
-    z-index:-22;    
+    position:absolute;
+    border-left: 2400px solid rgb(237, 226, 141);
+    border-bottom: 1200px solid #89be8b;
+    z-index:-22;
 }
 
 #footer article {

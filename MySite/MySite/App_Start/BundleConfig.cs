@@ -24,6 +24,11 @@ namespace MySite
                 "~/scripts/functions.js",
                 "~/scripts/jarallax-0.2.4b.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/progressbarjs").Include(
+                "~/scripts/progressbar.js",
+                "~/progressbar.min.js",
+                "~/progressbarFunction.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.min.css",
                 "~/Content/bootstrap.theme.css",
