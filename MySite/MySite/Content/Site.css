@@ -1,23 +1,12 @@
 ﻿html{
-    max-width:2380px;
 }
 
 body {
-    font-family: 'Century Gothic';
-    color: rgba(0,0,0,0.8);
-    font-size:150px;
-    background-color: rgb(237, 226, 141);
-    max-width:2380px;
-    height:3900px;
-    background: fixed;
+    padding-top:52px;
     margin:0 auto;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 2px;
-    padding-right: 2px;
-}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -33,7 +22,7 @@ article {
 }
 
 a {
-    color: #fff;
+
 }
 
 a:link {
@@ -45,217 +34,78 @@ a:hover {
 }
 
 section {
-    height:1300px;
-    max-width:2380px;
-    width:100%;
+    height:1080px;
+    max-width:1920px;
     margin: 0 auto;
     position:relative;
-    z-index:-3;
 }
 
 #sections {
-    margin-top:0px;
-    z-index:-4;
+    margin-top:0 auto;
 }
-
-.navigation {
-    margin:0 auto;
-    position: fixed;
-    top:0;
-    left:0;
-    z-index:9999;
-    width:200px;
-    height:540px;
-    margin-top:50px;
-}
-
-#nav li {
-    margin-top:50px;
-    display:inline;
-    float:left;
-    height:120px;
-    width:120px;
-}
-
-#nav {
-    width:200px;
-    margin: 0 auto;
-    height:560px;
-}
-
-.menu-shape {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #cbcbcb;
-    -webkit-box-shadow: 0 0 8px 0.5px rgb(36, 51, 42);
-    text-align:center;
-}
-
-.menu-shape span {
-    font-size: 40%;
-    color: rgba(0,0,0,0.8) ;
-    line-height:120px;
-    float:left;
-    margin-left:25%;
-}
-
-.navTo {
-    display: block;
-    border-radius:2px;
-    font-weight: bold;
-    width: 100px;
-    height:100px;
-    border: 2px rgba(0,0,0,0.8);
-    -moz-box-shadow: 0px 0px 30px #fff;
-}
-
 
 #home {
-    background: transparent fixed; min-height: 1300px; 
+    background: rgb(128, 128, 128) fixed; min-height: 1080px;
     overflow: hidden;
     width:100%;
-    z-index:-2;
-}
-
-#home-splitter {
-    border-top: 1000px solid rgb(94, 128, 123) ;
-    border-right: 2600px solid rgb(237, 226, 141); 
-    border-bottom: 500px solid rgb(111, 201, 147);
-    width:0px;
-    height:0px;
-    transform:rotate(-180deg);
-    z-index:-1;
-    position:absolute;
-}
-
-#home article {
-    position:absolute;
-    text-align: center;
-    top: 150px;
-    width: 100%;    
-}
-#main-box-name {
-    background-color:rgb(111, 201, 147);
-    height:290px;
-    width:700px;
-    position:relative;
-    transform:rotate(10.9deg);
-    margin-left: 1000px;
-    margin-top:161px;
-}
-
-#name-box {
-    position:absolute;
-    width:700px;
-    height:100px;
-    background-color:rgba(0,0,0,0.8);
-    top:0px;    
-}
-
-#name-box article {
-    top:0px;
-    font-size:72px;
-    color:white;
-}
-
-#profession {
-    position:relative;
-    font-size:50px;
-    margin: 0 auto;
-    color: rgb(222, 244, 208);
-}
-
-#description-box {
-    position:absolute;
-    top:350px;
-    background-color:rgb(250, 240, 165);
-    width: 500px; 
-	height: 500px;
-    border-radius:50%;
-    position:absolute;
-    margin-left:350px;
-    margin-bottom:40px;
-    box-shadow:inset 0 0 10px rgb(177, 167, 83);
-}
-
-#description-box article {
-    font-size:50px;
-    top:70px;
-}
-
-#employed {
-    font-size:40px;
-    top:140px;
-    left:170px;
-    position:absolute;
-}
-
-#at {
-    top:200px;
-    position:absolute;
-    left:205px;
-}
-
-#at h3 {
-    font-size:100px;
-}
-
-#jobtitle {
-    position:absolute;
-    left:120px;
-    top: 330px;
 }
 
 #content {
-    background: rgb(222, 244, 208) fixed; background-size:cover; min-height:1300px;
-    overflow:hidden;   
+    background: rgb(222, 244, 208) fixed; background-size:cover; min-height:1080px;
+    overflow:hidden;
+    width:100%;
 }
 
-#content-content {
-    position: relative;
-    height:1300px;
-    width:2800px;
-}
-#content-splitter {
-    border-top: 505px solid rgb(94, 128, 123);
-    border-bottom: 800px solid #ddaa85;
-    border-right:2800px solid rgb(237, 226, 141);
-    z-index:-1;
-    position:absolute;
-}
-
-#gauges {
-    background-color: rgba(0,0,0,0.5);
-    border-radius:5px;
-    box-shadow: 0 0 5px rgb(36, 51, 42);
-    width: 1700px;
-    height: 1000px;
-    position: relative;
+#performance {
+    font-size: 50px;
+    color:#fff;
     text-align:center;
-    margin:0 400px;
-    position: absolute;
-    top:150px;
+    background-color:rgb(41, 107, 95);
+    border-radius:0px;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.5);
 }
 
-#bar1{
-    width:300px;
-    height:300px;
+#gaugesContainer {
+    margin-top:100px;
+    width:100%;
+}
+.gauges {
+    background-color: rgba(0,0,0,0.8);
+    border-radius:5px;
+    box-shadow: 0 0 5px 0 rgb(36, 51, 42);
+    width: 170px;
+    height: 180px;
+    text-align:center;
+    position: relative;    
+}
+
+.gauges h1 {
+    padding-top:140px;
+    color:#fff;
+}
+
+.bars{
+    width:120px;
+    height:120px;
     position: absolute;
-    left:150px;
-    top:100px;
+    left:24px;
+    top:13px;
+}
+
+#ulGauges {
+    float:left;
+    margin-left:65px;
+}
+
+.liGauges {
+    display: inline-block;
+    list-style-type:none;
+    margin-right:70px;
+    margin-top:20px;
 }
 
 #footer {
-    background: transparent fixed; background-size:cover; min-height:1300px;
-    overflow:hidden;
-}
-
-#contact-splitter {
-    position:absolute;
-    border-left: 2400px solid rgb(237, 226, 141);
-    border-bottom: 1200px solid #89be8b;
-    z-index:-22;
+    background: rgb(233, 188, 125) fixed; background-size:cover; min-height:1080px;
 }
 
 #footer article {
@@ -264,85 +114,9 @@ section {
     top:150px;
     width:100%;
 }
+
 /*--------------CONTACT FORM------------------*/
 
-#main-form{    
-    width:600px;
-    height:600px;
-    position:relative;
-    float:left;
-    text-align:center;
-}
 
-.form-contact {
-    height: 586px;
-    width:586px;
-    border-radius:50%;
-    margin-left: 980px;
-    margin-top:850px;
-    font-size:20px;
-    background-color:rgb(237, 226, 141);
-    position:relative;
-    
-}
-
-.form-layout {
-    height:500px;
-    width: 450px;
-    margin-top:80px;
-    position:absolute;
-    right:65px;
-}
-
-.formGroup {
-    margin-bottom: 5px;
-    margin-top:5px;
-    margin-right:5px;
-    margin-left:0;
-    height: 50px;
-    width: 350px;
-    border-radius: 10px;
-    border:none;
-    outline:none;
-    box-shadow: 0 0 7px #89be8b;
-}
-
-.formGroup #txtFirstName {
-    margin-left: 600px;
-}
-
-#buttonSend {
-    height:50px;
-    width:300px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Century Gothic';
-    position:absolute;
-    top:380px;
-    right:137px;
-    border-radius:10px;
-    border: none;
-    background-color:#89be8b;
-    color:#FFF;
-}
-
-#txtInfo {   
-    font-size:20px;
-    width:950px;
-    height:180px;
-    margin-right:0px;
-    margin-top:5px;
-    border-radius:10px;
-    border: none;
-    resize: none;
-    outline:none;
-    box-shadow: 0 0 7px #89be8b;
-}
-
-#writeMe {
-    color:rgb(36, 51, 42);
-    font-family: 'Century Gothic';
-    margin-top:0px;
-}
 
 /*--------------END CONTACT FORM------------------*/

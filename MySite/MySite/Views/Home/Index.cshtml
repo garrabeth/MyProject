@@ -4,58 +4,67 @@
 }
 
 @section featured {
-    
-    <div class="navigation">
-        <ul id="nav">
-            <li><a class="navTo" href="#home"><div class="menu-shape"><span class="glyphicon glyphicon-home"></span></div></a></li>
-            <li><a class="navTo" href="#content"><div class="menu-shape"><span class="glyphicon glyphicon-blackboard"></div></a></li>
-            <li><a class="navTo" href="#footer"><div class="menu-shape"><span class="glyphicon glyphicon-envelope"></span></div></a></li>
-        </ul>
+<div class="navbar navbar-default navbar-fixed-top" id="navigationBar" role="navigation">
+    <div class="container" id="navContainer">
+        <div class="navbar-header" id="navHeader">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="navButton">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GB</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="navUl">
+                <li><a href="#home" class="navTo">Home</a></li>
+                <li><a href="#content" class="navTo">Content</a></li>
+                <li><a href="#footer" class="navTo">The End</a></li>
+            </ul>
+        </div>
     </div>
+</div>
 
-    <div id="sections">
+    <div id="sections" class="container">
         <section id="home" data-type="background" data-speed="10" class="pages">
-            <div id="home-splitter"></div>
-                <div id="main-box-name">
-                    <div id="name-box"><article>Gabriel Bashe</article></div>
-                    <article id="profession">back-end & front-end developer</article>
-                </div>
-                <div id="description-box">
-                    <article>Job status</article>
-                    <div id="employed"><h2>EMPLOYED</h2></div>                    
-                    <div id="at"><h3>&#64;</h3></div>
-                    <div id="jobtitle"><h1>SOFTRONIC AB</h1></div>
-                </div>             
-                <article></article>
+
         </section>
 
         <section id="content" data-type="background" data-speed="10" class="pages">
-            <div id="content-splitter"></div>            
-            <div id="content-content">
-                <div id="gauges">
-                    <div id="bar1"></div>
-                </div>                
+            <article id="performance" class="jumbotron">PERFORMANCE</article>
+            <div id="gaugesContainer" class="container">
+                <ul id="ulGauges">
+                    <li class="liGauges">
+                        <div class="gauges">
+                            <div class="bars" id="bar1"></div>
+                            <h1>Test</h1>
+                        </div>
+                    </li>
+                    <li class="liGauges">
+                        <div class="gauges">
+                            <div class="bars" id="bar2"></div>
+                            <h1>Test</h1>
+                        </div>
+                    </li>
+                    <li class="liGauges">
+                        <div class="gauges">
+                            <div class="bars" id="bar3"></div>
+                            <h1>Test</h1>
+                        </div>
+                    </li>
+                    <li class="liGauges">
+                        <div class="gauges">
+                            <div class="bars" id="bar4"></div>
+                            <h1>Test</h1>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
         </section>
 
         <section id="footer" data-type="background" data-speed="10" class="pages">
-            <form id="main-form">
-                <div class="form-contact">                    
-                    <div class="form-layout">
-                        <h2 id="writeMe">WRITE ME!</h2>
-                        <div>
-                            <input type="text" class="formGroup" id="txtFirstName" placeholder="Name" />
-                        </div>
-                        <div>
-                            <textarea id="txtInfo" placeholder="Write anything..."></textarea>                            
-                        </div>                       
-                    </div>
-                    <button type="button" id="buttonSend" value="Send me">DON'T SEND</button>                 
-                </div>                    
-            </form>       
-                <div id="contact-splitter">
-                </div>
-            <article></article>
+
         </section>
     </div>
     

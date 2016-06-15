@@ -18,7 +18,7 @@
 
         $('.navTo').click(function (e) {
             $root.animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
+                scrollTop: $($.attr(this, 'href')).offset().top-80
             }, 600);
             e.preventDefault();
         });
