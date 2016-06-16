@@ -18,9 +18,18 @@
 
         $('.navTo').click(function (e) {
             $root.animate({
-                scrollTop: $($.attr(this, 'href')).offset().top-80
+                scrollTop: $($.attr(this, 'href')).offset().top-50
             }, 600);
             e.preventDefault();
+        });
+
+    /*Länkar till sociala medier*/
+        $('#lnButton').click(function () {
+            window.open("https://www.linkedin.com/in/gabriel-bashe-986406a9?trk=nav_responsive_tab_profile");
+        });
+
+        $('#fbButton').click(function () {
+            window.open("https://www.facebook.com/garrabeth");
         });
 });        
 
