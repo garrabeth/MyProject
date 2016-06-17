@@ -1,10 +1,19 @@
-﻿window.onload = function onLoad() {
+﻿$(document).on('scroll', function hello() {
+    if ($(this).scrollTop() >= $('#content').position().top -100) {
+        fireProgressBar();
+        fireProgressBar = true;
+    }
+    return false;
+})
 
-    var bar1 = new ProgressBar.Circle('#bar1', {
+function fireProgressBar() {
+
+
+    var bars = new ProgressBar.Circle('.bars', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'easeInOut',
+        easing: 'bounce',
         duration: 1400,
         text: {
             autoStyleContainer: false
@@ -25,17 +34,17 @@
         }
     });
 
-    bar1.text.style.fontFamily = '"Century Gothic"';
-    bar1.text.style.fontSize = '30px';
-    bar1.text.style.color = '#fff';
-    bar1.animate(0.75);
+    bars.text.style.fontFamily = '"Century Gothic"';
+    bars.text.style.fontSize = '25px';
+    bars.text.style.color = '#fff';
+    bars.animate(0.75);
 
 
     var bar2 = new ProgressBar.Circle('#bar2', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'easeInOut',
+        easing: 'bounce',
         duration: 1400,
         text: {
             autoStyleContainer: false
@@ -57,7 +66,7 @@
     });
 
     bar2.text.style.fontFamily = '"Century Gothic"';
-    bar2.text.style.fontSize = '30px';
+    bar2.text.style.fontSize = '25px';
     bar2.text.style.color = '#fff';
     bar2.animate(0.50);
 
@@ -65,7 +74,7 @@
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'easeInOut',
+        easing: 'bounce',
         duration: 1400,
         text: {
             autoStyleContainer: false
@@ -87,7 +96,7 @@
     });
 
     bar3.text.style.fontFamily = '"Century Gothic"';
-    bar3.text.style.fontSize = '30px';
+    bar3.text.style.fontSize = '25px';
     bar3.text.style.color = '#fff';
     bar3.animate(0.80);
 
@@ -95,7 +104,7 @@
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'easeInOut',
+        easing: 'bounce',
         duration: 1400,
         text: {
             autoStyleContainer: false
@@ -117,7 +126,7 @@
     });
 
     bar4.text.style.fontFamily = '"Century Gothic"';
-    bar4.text.style.fontSize = '30px';
+    bar4.text.style.fontSize = '25px';
     bar4.text.style.color = '#fff';
     bar4.animate(0.70);
-};
+}

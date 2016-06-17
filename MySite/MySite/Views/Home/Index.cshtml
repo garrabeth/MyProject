@@ -13,13 +13,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navTo" href="#home">Gabriel Bashe</a>
+            <a class="navTo" href="#home">GB</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" id="navUl">
-                <li><a href="#home" class="navTo">HOME</a></li>
-                <li><a href="#content" class="navTo">SKILLS</a></li>
-                <li><a href="#footer" class="navTo">END</a></li>
+                <li><a href="#home" class="navTo">INFO</a></li>
+                <li><a href="#content" class="navTo"onclick="hello()">SKILLS</a></li>
+                <li><a href="#footer" class="navTo">REACH OUT</a></li>
             </ul>
         </div>
     </div>
@@ -27,32 +27,7 @@
 
     <div id="sections" class="container">
         <section id="home" data-type="background" data-speed="10" class="pages">
-            <div id="leftHeader" class="container">
-                <div id="socialContainer" class="container">
-                    <ul id="ulSocial">
-                        <li class="liSocial">
-                            <button class="btn btn-default" id="fbButton" href="">
-                                <img class="img-responsive" src="~/images/fb-icon.png" />
-                            </button>
-                        </li>
-                        <li class="liSocial">
-                            <button class="btn btn-default" data-toggle="modal" data-target="#emailModal">
-                                <img class="img-responsive" src="~/images/gmail-icon.png" />
-                            </button>
-                        </li>
-                        <li class="liSocial">
-                            <button class="btn btn-default" id="lnButton">
-                                <img class="img-responsive" src="~/images/linkedin-logo.png"/>
-                            </button>
-                        </li>
-                        <li class="liSocial">
-                            <button class="btn btn-default">
-                                <img class="img-responsive" src="~/images/phone.png" />
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <div id="homeBackground"></div>
             <div id="emailModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -85,7 +60,8 @@
         </section>
 
         <section id="content" data-type="background" data-speed="10" class="pages">
-            <article id="performance" class="jumbotron">PERFORMANCE</article>
+            <div id="contentBackground"></div>
+            <article class="headers">SKILLS</article>
             <div id="gaugesContainer" class="container">
                 <ul id="ulGauges">
                     <li class="liGauges">
@@ -118,6 +94,34 @@
         </section>
 
         <section id="footer" data-type="background" data-speed="10" class="pages">
+            <div id="footerBackground"></div>
+            <article class="headers">REACH OUT</article>
+            <div id="leftHeader" class="container">
+                <div id="socialContainer" class="container">
+                    <ul id="ulSocial">
+                        <li class="liSocial">
+                            <button class="btn btn-default" id="fbButton" href="">
+                                <img class="img-responsive" src="~/images/fb-icon.png" />
+                            </button>
+                        </li>
+                        <li class="liSocial">
+                            <button class="btn btn-default" data-toggle="modal" data-target="#emailModal">
+                                <img class="img-responsive" src="~/images/gmail-icon.png" />
+                            </button>
+                        </li>
+                        <li class="liSocial">
+                            <button class="btn btn-default" id="lnButton">
+                                <img class="img-responsive" src="~/images/linkedin-logo.png" />
+                            </button>
+                        </li>
+                        <li class="liSocial">
+                            <button class="btn btn-default">
+                                <img class="img-responsive" src="~/images/phone.png" />
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </section>
     </div>
