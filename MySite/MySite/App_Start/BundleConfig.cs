@@ -15,14 +15,15 @@ namespace MySite
 
             bundles.Add(new ScriptBundle("~/bundles/jquerys").Include(
                 "~/scripts/jquery-1.10.2.min.js",
-                "~/scripts/jquery-1.10.2.js"));
+                "~/scripts/jquery-1.10.2.js",
+                "~/scripts/jquery-ui.js",
+                "~/scripts/jquery-ui.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrapjs").Include(
                 "~/scripts/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/functionsjs").Include(
-                "~/scripts/functions.js",
-                "~/scripts/jarallax-0.2.4b.js"));
+                "~/scripts/functions.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/progressbarjs").Include(
                 "~/scripts/progressbar.js",

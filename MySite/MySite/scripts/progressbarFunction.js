@@ -1,25 +1,29 @@
-﻿$(document).on('scroll', function hello() {
-    if ($(this).scrollTop() >= $('#content').position().top -100) {
+﻿$(window).bind('scroll', function loadProgressBar() {
+    if ($(this).scrollTop() >= $('#content').position().top - 300) {
         fireProgressBar();
         fireProgressBar = true;
     }
+
+    //else if ($(this).scrollTop() >= $('#content').position().top - 900) {
+    //    fireProgressBar().repeat();
+    //    fireProgressBar = true;
+    //}
     return false;
-})
+});
 
 function fireProgressBar() {
 
-
-    var bars = new ProgressBar.Circle('.bars', {
+    var java = new ProgressBar.Circle('#java', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'bounce',
+        easing: 'easeInOut',
         duration: 1400,
         text: {
             autoStyleContainer: false
         },
-        from: { color: 'rgb(111, 201, 147)', width: 2 },
-        to: { color: 'rgb(182, 57, 57)', width: 6 },
+        from: { color: '#fe6666', width: 2 },
+        to: { color: '#fe6666', width: 6 },
 
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -34,23 +38,23 @@ function fireProgressBar() {
         }
     });
 
-    bars.text.style.fontFamily = '"Century Gothic"';
-    bars.text.style.fontSize = '25px';
-    bars.text.style.color = '#fff';
-    bars.animate(0.75);
+    java.text.style.fontFamily = '"Arial"';
+    java.text.style.fontSize = '25px';
+    java.text.style.color = 'rgba(0,0,0,0.8)';
+    java.animate(0.75);
 
 
-    var bar2 = new ProgressBar.Circle('#bar2', {
+    var dotnet = new ProgressBar.Circle('#dotnet', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'bounce',
+        easing: 'easeInOut',
         duration: 1400,
         text: {
             autoStyleContainer: false
         },
-        from: { color: 'rgb(111, 201, 147)', width: 2 },
-        to: { color: 'rgb(57, 182, 125)', width: 8 },
+        from: { color: '#c254fb', width: 2 },
+        to: { color: '#c254fb', width: 8 },
 
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -65,22 +69,22 @@ function fireProgressBar() {
         }
     });
 
-    bar2.text.style.fontFamily = '"Century Gothic"';
-    bar2.text.style.fontSize = '25px';
-    bar2.text.style.color = '#fff';
-    bar2.animate(0.50);
+    dotnet.text.style.fontFamily = '"Arial"';
+    dotnet.text.style.fontSize = '25px';
+    dotnet.text.style.color = 'rgba(0,0,0,0.8)';
+    dotnet.animate(0.50);
 
-    var bar3 = new ProgressBar.Circle('#bar3', {
+    var javascript = new ProgressBar.Circle('#javascript', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'bounce',
+        easing: 'easeInOut',
         duration: 1400,
         text: {
             autoStyleContainer: false
         },
-        from: { color: 'rgb(111, 201, 147)', width: 2 },
-        to: { color: 'rgb(213, 105, 42)', width: 6 },
+        from: { color: '#c9cf29', width: 2 },
+        to: { color: '#c9cf29', width: 6 },
 
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -95,22 +99,22 @@ function fireProgressBar() {
         }
     });
 
-    bar3.text.style.fontFamily = '"Century Gothic"';
-    bar3.text.style.fontSize = '25px';
-    bar3.text.style.color = '#fff';
-    bar3.animate(0.80);
+    javascript.text.style.fontFamily = '"Arial"';
+    javascript.text.style.fontSize = '25px';
+    javascript.text.style.color = 'rgba(0,0,0,0.8)';
+    javascript.animate(0.80);
 
-    var bar4 = new ProgressBar.Circle('#bar4', {
+    var htmlcss = new ProgressBar.Circle('#html-css', {
         color: 'rgb(111, 201, 147)',
         strokeWidth: 6,
         trailWidth: 2,
-        easing: 'bounce',
+        easing: 'easeInOut',
         duration: 1400,
         text: {
             autoStyleContainer: false
         },
-        from: { color: 'rgb(111, 201, 147)', width: 2 },
-        to: { color: 'rgb(61, 112, 168)', width: 6 },
+        from: { color: '#ef981c', width: 2 },
+        to: { color: '#ef981c', width: 6 },
 
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -125,8 +129,128 @@ function fireProgressBar() {
         }
     });
 
-    bar4.text.style.fontFamily = '"Century Gothic"';
-    bar4.text.style.fontSize = '25px';
-    bar4.text.style.color = '#fff';
-    bar4.animate(0.70);
+    htmlcss.text.style.fontFamily = '"Arial"';
+    htmlcss.text.style.fontSize = '25px';
+    htmlcss.text.style.color = 'rgba(0,0,0,0.8)';
+    htmlcss.animate(0.70);
+
+    var sql = new ProgressBar.Circle('#sql', {
+        color: 'rgb(111, 201, 147)',
+        strokeWidth: 6,
+        trailWidth: 2,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: { color: '#5255354', width: 2 },
+        to: { color: '#5255354', width: 6 },
+
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + "%");
+            }
+        }
+    });
+
+    sql.text.style.fontFamily = '"Arial"';
+    sql.text.style.fontSize = '25px';
+    sql.text.style.color = 'rgba(0,0,0,0.8)';
+    sql.animate(0.70);
+
+    var photoshop = new ProgressBar.Circle('#photoshop', {
+        color: 'rgb(111, 201, 147)',
+        strokeWidth: 6,
+        trailWidth: 2,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: { color: '#2c68ac', width: 2 },
+        to: { color: '#2c68ac', width: 6 },
+
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + "%");
+            }
+        }
+    });
+
+    photoshop.text.style.fontFamily = '"Arial"';
+    photoshop.text.style.fontSize = '25px';
+    photoshop.text.style.color = 'rgba(0,0,0,0.8)';
+    photoshop.animate(0.70);
+
+    var illustrator = new ProgressBar.Circle('#illustrator', {
+        color: 'rgb(111, 201, 147)',
+        strokeWidth: 6,
+        trailWidth: 2,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: { color: '#ab7b27', width: 2 },
+        to: { color: '#ab7b27', width: 6 },
+
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + "%");
+            }
+        }
+    });
+
+    illustrator.text.style.fontFamily = '"Arial"';
+    illustrator.text.style.fontSize = '25px';
+    illustrator.text.style.color = 'rgba(0,0,0,0.8)';
+    illustrator.animate(0.70);
+
+    var css = new ProgressBar.Circle('#css', {
+        color: 'rgb(111, 201, 147)',
+        strokeWidth: 6,
+        trailWidth: 2,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: { color: '#40a1ce', width: 2 },
+        to: { color: '#40a1ce', width: 6 },
+
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + "%");
+            }
+        }
+    });
+
+    css.text.style.fontFamily = '"Arial"';
+    css.text.style.fontSize = '25px';
+    css.text.style.color = 'rgba(0,0,0,0.8)';
+    css.animate(0.70);
 }

@@ -146,7 +146,16 @@
     <Content Include="images\gmail-icon.png" />
     <Content Include="images\home-icon.png" />
     <Content Include="images\linkedin-logo.png" />
+    <Content Include="images\moving mountains.mp4" />
     <Content Include="images\phone.png" />
+    <Content Include="images\skillsLogos\ai.png" />
+    <Content Include="images\skillsLogos\css.png" />
+    <Content Include="images\skillsLogos\html.png" />
+    <Content Include="images\skillsLogos\java.png" />
+    <Content Include="images\skillsLogos\javascript.png" />
+    <Content Include="images\skillsLogos\ms.net.png" />
+    <Content Include="images\skillsLogos\ps.png" />
+    <Content Include="images\skillsLogos\sql.png" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -157,6 +166,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\normalize.less" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -167,6 +177,8 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\jquery-ui.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\progressbar.js" />
     <Content Include="scripts\progressbar.min.js" />
