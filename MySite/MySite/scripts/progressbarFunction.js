@@ -1,17 +1,17 @@
-﻿$(window).bind('scroll', function loadProgressBar() {
+﻿$(document).ready(function () {
+$(window).bind('scroll', function() { 
     if ($(this).scrollTop() >= $('#content').position().top - 300) {
         fireProgressBar();
         fireProgressBar = true;
     }
-
-    //else if ($(this).scrollTop() >= $('#content').position().top - 900) {
-    //    fireProgressBar().repeat();
-    //    fireProgressBar = true;
-    //}
     return false;
 });
 
+});
+
 function fireProgressBar() {
+
+    var mq = window.matchMedia("(max-width: 375px)");
 
     var java = new ProgressBar.Circle('#java', {
         color: 'rgb(111, 201, 147)',
@@ -39,8 +39,8 @@ function fireProgressBar() {
     });
 
     java.text.style.fontFamily = '"Arial"';
-    java.text.style.fontSize = '25px';
     java.text.style.color = 'rgba(0,0,0,0.8)';
+    java.text.style.fontWeight = '800';
     java.animate(0.75);
 
 
@@ -70,8 +70,8 @@ function fireProgressBar() {
     });
 
     dotnet.text.style.fontFamily = '"Arial"';
-    dotnet.text.style.fontSize = '25px';
     dotnet.text.style.color = 'rgba(0,0,0,0.8)';
+    dotnet.text.style.fontWeight = '800';
     dotnet.animate(0.50);
 
     var javascript = new ProgressBar.Circle('#javascript', {
@@ -100,8 +100,8 @@ function fireProgressBar() {
     });
 
     javascript.text.style.fontFamily = '"Arial"';
-    javascript.text.style.fontSize = '25px';
     javascript.text.style.color = 'rgba(0,0,0,0.8)';
+    javascript.text.style.fontWeight = '800';
     javascript.animate(0.80);
 
     var htmlcss = new ProgressBar.Circle('#html-css', {
@@ -130,8 +130,8 @@ function fireProgressBar() {
     });
 
     htmlcss.text.style.fontFamily = '"Arial"';
-    htmlcss.text.style.fontSize = '25px';
     htmlcss.text.style.color = 'rgba(0,0,0,0.8)';
+    htmlcss.text.style.fontWeight = '800';
     htmlcss.animate(0.70);
 
     var sql = new ProgressBar.Circle('#sql', {
@@ -160,8 +160,8 @@ function fireProgressBar() {
     });
 
     sql.text.style.fontFamily = '"Arial"';
-    sql.text.style.fontSize = '25px';
     sql.text.style.color = 'rgba(0,0,0,0.8)';
+    sql.text.style.fontWeight = '800';
     sql.animate(0.70);
 
     var photoshop = new ProgressBar.Circle('#photoshop', {
@@ -190,8 +190,8 @@ function fireProgressBar() {
     });
 
     photoshop.text.style.fontFamily = '"Arial"';
-    photoshop.text.style.fontSize = '25px';
     photoshop.text.style.color = 'rgba(0,0,0,0.8)';
+    photoshop.text.style.fontWeight = '800';
     photoshop.animate(0.70);
 
     var illustrator = new ProgressBar.Circle('#illustrator', {
@@ -220,8 +220,8 @@ function fireProgressBar() {
     });
 
     illustrator.text.style.fontFamily = '"Arial"';
-    illustrator.text.style.fontSize = '25px';
     illustrator.text.style.color = 'rgba(0,0,0,0.8)';
+    illustrator.text.style.fontWeight = '800';
     illustrator.animate(0.70);
 
     var css = new ProgressBar.Circle('#css', {
@@ -250,7 +250,7 @@ function fireProgressBar() {
     });
 
     css.text.style.fontFamily = '"Arial"';
-    css.text.style.fontSize = '25px';
     css.text.style.color = 'rgba(0,0,0,0.8)';
+    css.text.style.fontWeight = '800';
     css.animate(0.70);
 }

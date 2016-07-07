@@ -2,19 +2,19 @@
     
     //------------Navigation between tabs with dimensions----------------//
 
-    $('section[data-type="background"]').each(function() {
-        var $backObj = $(this);
+    //$('section[data-type="background"]').each(function() {
+    //    var $backObj = $(this);
 
-        $(window).scroll(function() {
-            var yPos = -($(window).scrollTop() / $backObj.data('speed'));
-            var coords = '50% ' + yPos + 'px';
-            $backObj.css({ backgroundPosition: coords });
-            document.createElement("article");
-            document.createElement("div");
-            document.createElement("section");
+    //    $(window).scroll(function() {
+    //        var yPos = -($(window).scrollTop() / $backObj.data('speed'));
+    //        var coords = '50% ' + yPos + 'px';
+    //        $backObj.css({ backgroundPosition: coords });
+    //        document.createElement("article");
+    //        document.createElement("div");
+    //        document.createElement("section");
 
-        });
-    });
+    //    });
+    //});
 
         var $root = $('html, body');
 
@@ -59,7 +59,7 @@
 
         var $navTarget = $('#navigationBar');
         $(window).scroll(function () {
-            $navTarget.css({ background: $(this).scrollTop() < 200 ? "transparent" : "#fff" });
+            $navTarget.css({ background: $(this).scrollTop() < 150 ? "transparent" : "#fff" });
             
         });
 
@@ -78,7 +78,6 @@
         });
 
     //---------------------------End of länkar------------------------------------------//
-
 
 }); // Endtag for DocumentReadyFunction       
 

@@ -23,7 +23,8 @@ namespace MySite
                 "~/scripts/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/functionsjs").Include(
-                "~/scripts/functions.js"));
+                "~/scripts/functions.js",
+                "~/scripts/viewOnScroll.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/progressbarjs").Include(
                 "~/scripts/progressbar.js",
